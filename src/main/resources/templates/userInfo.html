@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>User's information</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Information about user:</h1>
+<p th:text="'name: ' + ${user.name}"/>
+<p th:text="'surname: ' + ${user.surname}"/>
+<p th:text="'patronymic: ' + ${user.patronymic}"/>
+<p th:text="'age: ' + ${user.age}"/>
+<p th:text="'salary: ' + ${user.salary}"/>
+<p th:text="'email: ' + ${user.email}"/>
+<p th:text="'workplace: ' + ${user.workplace}"/>
+<p th:text= "'current time: ' + ${#calendars.format(#calendars.createNow(), 'dd MMM yyyy HH:mm')}" />
+<p th:text="'user-agent' + ${#httpServletRequest.getHeader('User-Agent')}" />
+<p><a href="/searchUser">Find user</a></p>
+<p><a href="/user">Enter new user</a></p>
+<p><a href="/uploadFile">Upload file with information about user</a></p>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Search user</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>To find the user, enter his name and surname:</h1>
+<form action="#" th:action="@{/searchUser}" th:object="${user}" method="post">
+    <p>Name: <input type="text" th:field="*{name}" required/></p>
+    <p>Surname: <input type="text" th:field="*{surname}" required/></p>
+    <p><input type="submit" value="Get information about user" /> <input type="reset" value="Reset" /></p>
+    <p><a href="/user">Enter new user</a></p>
+    <p><a href="/uploadFile">Upload file with information about user</a></p>
+</form>
+</body>
+</html>

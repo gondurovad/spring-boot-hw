@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Upload File</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Upload csv file</h1>
+<p>You can upload a file with information about a user.</p>
+<p>The file should contain the name, surname, patronymic, age,
+    salary, email, place of work.</p>
+<p>Use a comma separator and wrap the fields in quotation marks.</p>
+<form action="#" th:action="@{/uploadFile}" enctype="multipart/form-data" method="post">
+    <table>
+        <tr>
+            <td><input type="file" name = "file"/></td>
+        </tr>
+    </table>
+    <button type="submit">Upload</button>
+    <p><a href="/searchUser">Find user</a></p>
+    <p><a href="/user">Enter new user</a></p>
+</form>
+</body>
+</html>

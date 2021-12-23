@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Successful Form Submition</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Information sent successfully!</h1>
+<p>To notify user about registration click on button below</p>
+<button type="button" th:onclick="|window.location.href='/sendMsg'|">Send message</button>
+<p><a href="/user">Enter new user</a></p>
+<p><a href="/uploadFile">Upload file with information about user</a></p>
+<p><a href="/searchUser">Find user</a></p>
+</body>
+</html>
